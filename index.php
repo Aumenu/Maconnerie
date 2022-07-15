@@ -1,12 +1,52 @@
 <?php
-// Le fichier test.xml contient un document XML avec un élément racine
-// et au moins un élément /[racine]/title.
-
 if (file_exists('source.xml')) {
+    //On convertit le fichier 'source.xml' en objet
     $xml = simplexml_load_file('source.xml');
-
-    print_r($xml);
+    
 } else {
-    exit('Echec lors de l\'ouverture du fichier test.xml.');
+    exit('Echec lors de l\'ouverture du fichier source.xml.');
+}
+function getNavBar($file)
+{ ?>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <?php
+                foreach ($file->page as $page) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#<?php echo $page['id']?>.php"><?php echo $page->menu ?></a>
+                    </li><?php } ?>
+            </ul>
+        </div>
+        </div>
+    </nav>
+<?php
 }
 ?>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Les fonctions exercice 1</title>
+</head>
+<body>
+    <?php
+    getNavBar($xml);
+    foreach ($xml->page as $page) {
+        echo $page->id;
+        echo $page->menu;
+        echo $page->title;
+        echo $page->content;
+    }    
+?>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
+
+
+
+
