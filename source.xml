@@ -30,7 +30,7 @@
     Nous travaillons exclusivement pour les particuliers.</p>
 <p class="text-center"><iframe src="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed" allowfullscreen="" width="500" height="281" frameborder="0"></iframe></p>
 <p class="text-center">Notre groupement est en mesure de vous proposer les compétences métier dans le gros oeuvre et le second oeuvre :</p><p>
-<ul >
+<ul>
     <li>Maçonnerie générale</li><li>
         Travaux de toiture</li><li>
         Isolation thermique et phonique</li><li>
@@ -67,15 +67,15 @@ bénéficier de prix très compétitifs et d’un excellent rapport qualité/pri
         <title>Avis clients - Maçonnerie Ocordo</title>
         <content><![CDATA[<h1 class="font-weight-bold text-center">Nos clients témoignent</h1>
 <div class="testimonials-list">
-    <div class="quote">
-        <h2 class="text-center">Rénovation transformation</h2>
-        <p class="text-center">Transformation rénovation d’un garage et refaire les murs ( placo), l’electricité (prises, eclairage leds ),le sol ( carrelage), les peintures et changement d’une porte-fenêtre. Devis: précis et rapide Prestations au rythme convenu, réalisation des travaux sans failles, très bonnes prestation Chantier: propreté absolue et nettoyage complet à la fin. Bémol : 2 jours de retard à cause du retard de livraison de la fenêtre, mais vraiment pas grave. Prix: très raisonnable Je recommande Ocordo pour l’efficacité du travail réalisé en amont: devis, tarifs. Ils connaissent le travail.</p>
-        <p class="text-center">BrunoPH</p>
+    <div class="quote border ">
+        <h2 class="text-right">Rénovation transformation</h2>
+        <p class="text-right">Transformation rénovation d’un garage et refaire les murs ( placo), l’electricité (prises, eclairage leds ),le sol ( carrelage), les peintures et changement d’une porte-fenêtre. Devis: précis et rapide Prestations au rythme convenu, réalisation des travaux sans failles, très bonnes prestation Chantier: propreté absolue et nettoyage complet à la fin. Bémol : 2 jours de retard à cause du retard de livraison de la fenêtre, mais vraiment pas grave. Prix: très raisonnable Je recommande Ocordo pour l’efficacité du travail réalisé en amont: devis, tarifs. Ils connaissent le travail.</p>
+        <p class="text-right">BrunoPH</p>
     </div>
-    <div class="quote">
-        <h2 class="text-center">Sérieux</h2>
-        <p class="text-center">Nous sommes satisfait du travail de cette entreprise qui a rénové notre maison quand nous sommes arrivés à lille. il y avait tout a rénové et leur commercial a su nous consacrer du temps pour nous proposer un projet qui convenait à notre gout et à notre budget. les travaux ont été bien fait à part un petit détail au niveau de la fourniture de la robineterie de la cuisine mais sans gravité</p>
-        <p class="text-center">PJ9e7S9L</p>
+    <div class="quote border">
+        <h2 class="text-right">Sérieux</h2>
+        <p class="text-right">Nous sommes satisfait du travail de cette entreprise qui a rénové notre maison quand nous sommes arrivés à lille. il y avait tout a rénové et leur commercial a su nous consacrer du temps pour nous proposer un projet qui convenait à notre gout et à notre budget. les travaux ont été bien fait à part un petit détail au niveau de la fourniture de la robineterie de la cuisine mais sans gravité</p>
+        <p class="text-right">PJ9e7S9L</p>
     </div>
 </div>]]></content>
     </page>
@@ -91,7 +91,7 @@ bénéficier de prix très compétitifs et d’un excellent rapport qualité/pri
     <li>Ou compétez le formulaire ci-dessous :</li>
 </ul>
 <div role="form">
-    <form action="#" method="post" class="form" novalidate="novalidate">
+    <form action="#" method="post" class="form row align-self-center"" novalidate="novalidate">
         <label>Votre nom * :</label><input name="your-name" value="" size="40" class="form-control text validates-as-required" type="text">
         <label>Votre email :</label><input name="your-email" value="" size="40" class="form-control text email validates-as-email"  type="email">
         <label>Votre numéro de téléphone * :</label>
