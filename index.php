@@ -15,7 +15,7 @@ function getNavBar($file)
                 <?php
                 foreach ($file->page as $page) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?menu=<?php echo $page['id'] ?>"><?php echo $page->menu ?></a>
+                        <a class="nav-link" href="<?php echo $page['id'] ?>.html"><?php echo $page->menu ?></a>
                     </li><?php } 
                     
                     ?>
