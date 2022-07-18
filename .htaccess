@@ -1,0 +1,2 @@
+RewriteEngine On 
+RewriteRule ([1234]).html index.php?menu=$1.php

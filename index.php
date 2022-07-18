@@ -6,7 +6,6 @@ if (file_exists('source.xml')) {
 } else {
     exit('Echec lors de l\'ouverture du fichier source.xml.');
 }
-
 function getNavBar($file)
 { ?>
 
@@ -39,13 +38,6 @@ function getNavBar($file)
 <body>
     <?php
     getNavBar($xml);
-    /*foreach ($xml->page as $page) {
-        echo $page->id;
-        echo $page->menu;
-        echo $page->title;
-        echo $page->content;
-        echo $page->id; */
-        
         if(isset($_GET['menu'])) {
             echo $xml->page[intval($_GET['menu'])-1]->content;
         } else {
