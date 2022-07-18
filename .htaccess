@@ -1,2 +1,5 @@
 RewriteEngine On 
 RewriteRule ([1234]).html index.php?menu=$1.php
+
+#Si l'url = 1/2/3/4.html alors index.php?menu=$1.php
+#([1234]) = $1 

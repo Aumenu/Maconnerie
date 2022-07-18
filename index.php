@@ -4,15 +4,16 @@ if (file_exists('source.xml')) {
     //On convertit le fichier 'source.xml' en objet
     $xml = simplexml_load_file('source.xml');
 } else {
+    //sinon message d'erreur.
     exit('Echec lors de l\'ouverture du fichier source.xml.');
 }
 function getNavBar($file)
-{ ?>
-
+{ // fonction qui genere une navbar ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <?php
+                //boucle foreach qui récupère les infos dans le xml, pour les boutons de la navbar, et les affiche.
                 foreach ($file->page as $page) { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $page['id'] ?>.html"><?php echo $page->menu ?></a>
@@ -37,10 +38,14 @@ function getNavBar($file)
 </head>
 <body>
     <?php
+    //appel de la fonction pour générer la navBar
     getNavBar($xml);
+    //Vérification si la variable $_GET['menu'] est définie, 
         if(isset($_GET['menu'])) {
+            //si oui afficher le contenue correspondant
             echo $xml->page[intval($_GET['menu'])-1]->content;
         } else {
+            //sinon affiche l'accueil
            echo $xml->page[0]->content;
         }
     
