@@ -1,12 +1,11 @@
 <?php
+//On vérifie si le fichier 'source.xml' existe
 if (file_exists('source.xml')) {
     //On convertit le fichier 'source.xml' en objet
     $xml = simplexml_load_file('source.xml');
-    
 } else {
     exit('Echec lors de l\'ouverture du fichier source.xml.');
 }
-
 function getNavBar($file)
 { ?>
 
@@ -16,15 +15,16 @@ function getNavBar($file)
                 <?php
                 foreach ($file->page as $page) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#<?php echo $page?>.php"><?php echo $page->menu ?></a>
-                    </li><?php } ?>
+                        <a class="nav-link" href="index.php?menu=<?php echo $page['id'] ?>"><?php echo $page->menu ?></a>
+                    </li><?php } 
+                    
+                    ?>
             </ul>
         </div>
         </div>
     </nav>
 <?php
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -38,14 +38,12 @@ function getNavBar($file)
 <body>
     <?php
     getNavBar($xml);
-    foreach ($xml->page as $page) {
-        if(isset($_GET[$page['menu']])) {
-    echo $page->id;
-    echo $page->menu;
-    echo $page->title;
-    echo $page->content;
-    }}
-
+        if(isset($_GET['menu'])) {
+            echo $xml->page[intval($_GET['menu'])-1]->content;
+        } else {
+           echo $xml->page[0]->content;
+        }
+    
 ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
